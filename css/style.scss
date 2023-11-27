@@ -405,6 +405,8 @@ header {
   padding: 140px 0 80px;
   position: relative;
   text-align: center;
+  min-height: 85dvh;
+
   &::before {
     content: "";
     width: 100%;
@@ -487,7 +489,7 @@ header {
       padding: 48px 16px;
     }
     .des {
-      color: var(--darkColor);
+      color: var(--grayColor);
     }
     ul {
       padding: 0;
@@ -531,6 +533,7 @@ header {
       margin: auto;
       .simpleParallax {
         height: 100%;
+        border-radius: 16px;
       }
       img {
         width: 100%;
@@ -604,3 +607,9 @@ header {
     }
   }
 }
+
+
+
+
+
+

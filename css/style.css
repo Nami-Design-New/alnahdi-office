@@ -437,6 +437,7 @@ header.headerAnimate {
   padding: 140px 0 80px;
   position: relative;
   text-align: center;
+  min-height: 85dvh;
 }
 .hearo::before {
   content: "";
@@ -524,7 +525,7 @@ header.headerAnimate {
   }
 }
 .aboutPage .info .des {
-  color: var(--darkColor);
+  color: var(--grayColor);
 }
 .aboutPage .info ul {
   padding: 0;
@@ -568,6 +569,7 @@ header.headerAnimate {
 }
 .aboutPage .lazyImg .lazyDiv .simpleParallax {
   height: 100%;
+  border-radius: 16px;
 }
 .aboutPage .lazyImg .lazyDiv img {
   width: 100%;

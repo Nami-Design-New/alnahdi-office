@@ -23,12 +23,10 @@ $(document).ready(function () {
     .addEventListener("change", () => {
       setFavicon();
     });
-
   $(".navbar-toggler").on("click", function () {
     // Toggle the "show" class on the navbar-nav element
     $(".navbar-nav").toggleClass("show");
   });
-
   // Add a click event listener to the document
   $(document).on("click", function (event) {
     // Check if the clicked element is not part of the navbar
@@ -37,7 +35,6 @@ $(document).ready(function () {
       $(".navbar-nav").removeClass("show");
     }
   });
-
   //navbar ainmation
   $(window).scroll(function () {
     var appScroll = $(document).scrollTop();
@@ -45,6 +42,153 @@ $(document).ready(function () {
       $("header").addClass("headerAnimate");
     } else {
       $("header").removeClass("headerAnimate");
+    }
+  });
+
+  ////////////////////////////// ///////////////////////
+  // Text Animation
+  ////////////////////////////// ///////////////////////
+  // lines
+  const animte_line = document.querySelectorAll(".animte_line");
+  animte_line.forEach((areveal) => {
+    var duration_value = 1;
+    var onscroll_value = 1;
+    var stagger_value = 0.08;
+    var data_delay = 0.5;
+    if (areveal.getAttribute("data-duration")) {
+      duration_value = areveal.getAttribute("data-duration");
+    }
+    if (areveal.getAttribute("data-on-scroll")) {
+      onscroll_value = areveal.getAttribute("data-on-scroll");
+    }
+    if (areveal.getAttribute("data-stagger")) {
+      stagger_value = areveal.getAttribute("data-stagger");
+    }
+    if (areveal.getAttribute("data-delay")) {
+      data_delay = areveal.getAttribute("data-delay");
+    }
+    areveal.split = new SplitText(areveal, {
+      // type: "lines,words,chars",
+      type: "lines,words",
+      linesClass: "anim-reveal-line",
+    });
+    if (onscroll_value == 1) {
+      areveal.anim = gsap.from(areveal.split.lines, {
+        scrollTrigger: {
+          trigger: areveal,
+          start: "top 90%",
+        },
+        duration: duration_value,
+        delay: data_delay,
+        ease: "circ.out",
+        y: 80,
+        stagger: stagger_value,
+        opacity: 0,
+      });
+    } else {
+      areveal.anim = gsap.from(areveal.split.lines, {
+        duration: duration_value,
+        delay: data_delay,
+        ease: "circ.out",
+        y: 80,
+        stagger: stagger_value,
+        opacity: 0,
+      });
+    }
+  });
+  // words
+  const animte_words = document.querySelectorAll(".animte_words");
+  animte_words.forEach((areveal) => {
+    var duration_value = 1;
+    var onscroll_value = 1;
+    var stagger_value = 0.02;
+    var data_delay = 0.5;
+    if (areveal.getAttribute("data-duration")) {
+      duration_value = areveal.getAttribute("data-duration");
+    }
+    if (areveal.getAttribute("data-on-scroll")) {
+      onscroll_value = areveal.getAttribute("data-on-scroll");
+    }
+    if (areveal.getAttribute("data-stagger")) {
+      stagger_value = areveal.getAttribute("data-stagger");
+    }
+    if (areveal.getAttribute("data-delay")) {
+      data_delay = areveal.getAttribute("data-delay");
+    }
+    areveal.split = new SplitText(areveal, {
+      // type: "lines,words,chars",
+      type: "lines,words",
+      linesClass: "anim-reveal-line",
+    });
+    if (onscroll_value == 1) {
+      areveal.anim = gsap.from(areveal.split.words, {
+        scrollTrigger: {
+          trigger: areveal,
+          start: "top 90%",
+        },
+        duration: duration_value,
+        delay: data_delay,
+        ease: "circ.out",
+        y: 80,
+        stagger: stagger_value,
+        opacity: 0,
+      });
+    } else {
+      areveal.anim = gsap.from(areveal.split.words, {
+        duration: duration_value,
+        delay: data_delay,
+        ease: "circ.out",
+        y: 80,
+        stagger: stagger_value,
+        opacity: 0,
+      });
+    }
+  });
+  // chars
+  const animte_chars = document.querySelectorAll(".animte_chars");
+  animte_chars.forEach((areveal) => {
+    var duration_value = 1;
+    var onscroll_value = 1;
+    var stagger_value = 0.003;
+    var data_delay = 0.5;
+    if (areveal.getAttribute("data-duration")) {
+      duration_value = areveal.getAttribute("data-duration");
+    }
+    if (areveal.getAttribute("data-on-scroll")) {
+      onscroll_value = areveal.getAttribute("data-on-scroll");
+    }
+    if (areveal.getAttribute("data-stagger")) {
+      stagger_value = areveal.getAttribute("data-stagger");
+    }
+    if (areveal.getAttribute("data-delay")) {
+      data_delay = areveal.getAttribute("data-delay");
+    }
+    areveal.split = new SplitText(areveal, {
+      type: "lines,words,chars",
+      linesClass: "anim-reveal-line",
+    });
+    if (onscroll_value == 1) {
+      areveal.anim = gsap.from(areveal.split.chars, {
+        scrollTrigger: {
+          trigger: areveal,
+          start: "top 90%",
+        },
+        duration: duration_value,
+        delay: data_delay,
+        ease: "circ.out",
+        y: 80,
+        stagger: stagger_value,
+        opacity: 0,
+      });
+    } else {
+      areveal.anim = gsap.from(areveal.split.chars, {
+        duration: duration_value,
+        delay: data_delay,
+        ease: "circ.out",
+        y: 80,
+        stagger: stagger_value,
+        opacity: 0,
+      });
     }
   });
 });
