@@ -2,6 +2,8 @@
   --mainColor: #5c6068;
   --mainColor20: #dbdcdf;
   --mainColor05: #f3f3f4;
+  --secondColor: #f7f3e7;
+  --goldColor: #f4bd4b;
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
@@ -13,12 +15,12 @@
 @font-face {
   font-family: fontRegular;
   font-display: swap;
-  src: url(../webfonts/29ltkaff-regular.woff2);
+  src: url(../webfonts/Bahij_TheSansArabic-Plain.ttf);
 }
 @font-face {
   font-family: fontBold;
   font-display: swap;
-  src: url(../webfonts/29ltkaff-bold.woff2);
+  src: url(../webfonts/Bahij_TheSansArabic-Bold.ttf);
 }
 * {
   font-family: "fontRegular", sans-serif;
@@ -86,7 +88,7 @@ p {
 @media (max-width: 767px) {
   .container,
   .container-fluid {
-    padding: 0px 8px;
+    padding: 0px 4px;
   }
 }
 video,
@@ -281,9 +283,8 @@ content {
     }
   }
 }
-
-.container{
-  width: min(100% - 24px , 1320px);
+.container {
+  width: min(100% - 4px, 1320px);
   max-width: unset;
   margin: auto;
 }
@@ -415,7 +416,6 @@ header {
   position: relative;
   text-align: center;
   min-height: 80dvh;
-
   &::before {
     content: "";
     width: 100%;
@@ -531,7 +531,7 @@ header {
       position: absolute;
       left: 0;
       top: 50%;
-      border: 10px solid var(--lightGrayColor);
+      border: 10px solid var(--secondColor);
       width: 100%;
       height: 90%;
       transform: translateY(-50%);
@@ -615,17 +615,15 @@ header {
     }
   }
 }
-
 .vision {
   position: relative;
   padding: 80px 0;
   background: url(../img/BG.svg);
   background-attachment: fixed;
-  border: 1px solid #eee;
+  border: 1px solid var(--secondColor);
   background-size: 20px;
   @media screen and (max-width: 768px) {
     padding: 40px 0;
-
   }
   .BG {
     position: absolute;
@@ -653,12 +651,8 @@ header {
     position: relative;
     z-index: 2;
     .group {
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      background-color: #ffffff0a;
-      border: 1px solid #ffffff20;
+      background-color: var(--whiteColor);
       padding: 32px;
-     
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -667,7 +661,6 @@ header {
       @media screen and (max-width: 768px) {
         padding: 16px;
         box-shadow: 0px 4px 12px #00000020;
-
       }
       h3 {
         font-weight: bold;
@@ -687,9 +680,12 @@ header {
       gap: 16px;
       text-align: center;
       justify-content: center;
+      @media screen and (max-width: 768px) {
+        gap: 8px;
+      }
       .value {
         padding: 24px;
-        flex: 1 ;
+        flex: 1;
         border: 1px dashed var(--mainColor20);
         display: flex;
         flex-direction: column;
@@ -702,7 +698,45 @@ header {
     }
   }
 }
-
+.scrollDown {
+  width: 25px;
+  height: 50px;
+  border: 2px solid var(--mainColor20);
+  border-radius: 100px;
+  position: relative;
+  margin: 50px auto 0;
+  transition: var(--transition);
+  display: flex;
+  @media (max-width: 768px) {
+    margin: 30px auto 0;
+  }
+  .mouse {
+    width: 12px;
+    height: 12px;
+    background: var(--mainColor);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollDown linear 2s infinite;
+    transition: var(--transition);
+  }
+}
+@keyframes scrollDown {
+  0% {
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 16px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 32px);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 25px;

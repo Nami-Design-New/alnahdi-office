@@ -2,6 +2,8 @@
   --mainColor: #5c6068;
   --mainColor20: #dbdcdf;
   --mainColor05: #f3f3f4;
+  --secondColor: #f7f3e7;
+  --goldColor: #f4bd4b;
   --whiteColor: #ffffff;
   --darkColor: #1f1f1f;
   --lightGrayColor: #d6d6d6;
@@ -14,12 +16,12 @@
 @font-face {
   font-family: fontRegular;
   font-display: swap;
-  src: url(../webfonts/29ltkaff-regular.woff2);
+  src: url(../webfonts/Bahij_TheSansArabic-Plain.ttf);
 }
 @font-face {
   font-family: fontBold;
   font-display: swap;
-  src: url(../webfonts/29ltkaff-bold.woff2);
+  src: url(../webfonts/Bahij_TheSansArabic-Bold.ttf);
 }
 * {
   font-family: "fontRegular", sans-serif;
@@ -95,7 +97,7 @@ p {
 @media (max-width: 767px) {
   .container,
   .container-fluid {
-    padding: 0px 8px;
+    padding: 0px 4px;
   }
 }
 video,
@@ -303,7 +305,7 @@ content {
 }
 
 .container {
-  width: min(100% - 24px, 1320px);
+  width: min(100% - 4px, 1320px);
   max-width: unset;
   margin: auto;
 }
@@ -564,7 +566,7 @@ header.headerAnimate {
   position: absolute;
   left: 0;
   top: 50%;
-  border: 10px solid var(--lightGrayColor);
+  border: 10px solid var(--secondColor);
   width: 100%;
   height: 90%;
   transform: translateY(-50%);
@@ -657,7 +659,7 @@ header.headerAnimate {
   padding: 80px 0;
   background: url(../img/BG.svg);
   background-attachment: fixed;
-  border: 1px solid #eee;
+  border: 1px solid var(--secondColor);
   background-size: 20px;
 }
 @media screen and (max-width: 768px) {
@@ -692,10 +694,7 @@ header.headerAnimate {
   z-index: 2;
 }
 .vision .container .group {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.0392156863);
-  border: 1px solid rgba(255, 255, 255, 0.1254901961);
+  background-color: var(--whiteColor);
   padding: 32px;
   height: 100%;
   display: flex;
@@ -727,6 +726,11 @@ header.headerAnimate {
   text-align: center;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .vision .container .values {
+    gap: 8px;
+  }
+}
 .vision .container .values .value {
   padding: 24px;
   flex: 1;
@@ -740,6 +744,48 @@ header.headerAnimate {
   font-weight: bold;
 }
 
+.scrollDown {
+  width: 25px;
+  height: 50px;
+  border: 2px solid var(--mainColor20);
+  border-radius: 100px;
+  position: relative;
+  margin: 50px auto 0;
+  transition: var(--transition);
+  display: flex;
+}
+@media (max-width: 768px) {
+  .scrollDown {
+    margin: 30px auto 0;
+  }
+}
+.scrollDown .mouse {
+  width: 12px;
+  height: 12px;
+  background: var(--mainColor);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDown linear 2s infinite;
+  transition: var(--transition);
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 16px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 32px);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 25px;
