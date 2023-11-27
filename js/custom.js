@@ -49,8 +49,8 @@ $(document).ready(function () {
   // Text Animation
   ////////////////////////////// ///////////////////////
   // lines
-  const animte_line = document.querySelectorAll(".animte_line");
-  animte_line.forEach((areveal) => {
+  const animate_lines = document.querySelectorAll(".animate_lines");
+  animate_lines.forEach((areveal) => {
     var duration_value = 1;
     var onscroll_value = 1;
     var stagger_value = 0.08;
@@ -97,8 +97,8 @@ $(document).ready(function () {
     }
   });
   // words
-  const animte_words = document.querySelectorAll(".animte_words");
-  animte_words.forEach((areveal) => {
+  const animate_words = document.querySelectorAll(".animate_words");
+  animate_words.forEach((areveal) => {
     var duration_value = 1;
     var onscroll_value = 1;
     var stagger_value = 0.02;
@@ -145,8 +145,8 @@ $(document).ready(function () {
     }
   });
   // chars
-  const animte_chars = document.querySelectorAll(".animte_chars");
-  animte_chars.forEach((areveal) => {
+  const animate_chars = document.querySelectorAll(".animate_chars");
+  animate_chars.forEach((areveal) => {
     var duration_value = 1;
     var onscroll_value = 1;
     var stagger_value = 0.003;
