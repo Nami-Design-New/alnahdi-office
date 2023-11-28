@@ -223,6 +223,34 @@ $(document).ready(function () {
       },
     },
   });
+
+  // team slider
+  var teamSlider = new Swiper(".teamSlider", {
+    navigation: {
+      nextEl: ".teamNext",
+      prevEl: ".teamPrev",
+    },
+    pagination: {
+      el: ".teamPagination",
+      type: "fraction",
+    },
+    // loop: true,
+    spaceBetween: 30,
+    speed: 1000,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    slidesPerView: "auto",
+  });
+  // $(".teamSlider").hover(
+  //   function () {
+  //     this.swiper.autoplay.stop();
+  //   },
+  //   function () {
+  //     this.swiper.autoplay.start();
+  //   }
+  // );
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
