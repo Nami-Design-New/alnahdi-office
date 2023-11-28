@@ -315,7 +315,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 1024;
   transition: var(--transition);
   height: 86px;
 }
@@ -1076,6 +1076,10 @@ footer .border-top {
   font-weight: bold;
   color: var(--mainColor);
   font-family: fontBold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .team .swiper {
   overflow: unset;
@@ -1222,6 +1226,153 @@ footer .border-top {
   flex-direction: column;
   line-height: 0px;
   transform: scale(-1) translateY(-30px);
+}
+
+.investments {
+  background-color: var(--mainColor);
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 60px;
+  background-image: linear-gradient(60deg, rgba(92, 96, 104, 0.7058823529), rgba(92, 96, 104, 0.8352941176)), url(../img/Saudi-Arabia-2560x1248.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.investments .sectionTitle {
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.investments .sectionTitle .title {
+  color: var(--whiteColor);
+  font-weight: bold;
+  font-family: fontBold;
+}
+.investments .sectionTitle .sub {
+  color: var(--goldColor);
+  font-weight: bold;
+}
+.investments .sectionTitle .hint {
+  color: var(--whiteColor);
+  width: min(100% - 40px, 800px);
+  margin: auto;
+  margin-top: 16px;
+}
+.investments .inner {
+  background-color: var(--mainColor);
+  text-align: center;
+  padding: 24px;
+  height: 100%;
+}
+.investments .inner .subTitle {
+  color: var(--whiteColor);
+  font-weight: bold;
+  font-family: fontBold;
+  margin-bottom: 16px;
+}
+.investments .inner .images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.investments .inner .images .logo {
+  flex: 1 20%;
+  min-width: 75px;
+  max-height: 100px;
+  padding: 10px;
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1/1;
+}
+.investments .inner .images .logo::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--whiteColor);
+  transition: var(--transition);
+  z-index: -1;
+}
+.investments .inner .images .logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+}
+.investments .inner .images .logo:hover::after {
+  content: "";
+  height: 100%;
+}
+.investments .inner .images .logo:hover img {
+  filter: none;
+}
+
+.partners {
+  background: var(--whiteColor);
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 60px;
+}
+.partners .sectionTitle {
+  padding-bottom: 10px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.partners .sectionTitle .title {
+  color: var(--mainColor);
+  font-weight: bold;
+  font-family: fontBold;
+}
+.partners .sectionTitle .sub {
+  color: var(--goldColor);
+  font-weight: bold;
+}
+.partners .sectionTitle .hint {
+  color: var(--grayColor);
+  width: min(100% - 40px, 800px);
+  margin: auto;
+  margin-top: 16px;
+}
+.partners .logo {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.partners .logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.partners .swiperControl {
+  position: relative;
+  padding-top: 60px;
+}
+.partners .swiperControl .swiper-pagination {
+  justify-content: center;
+}
+.partners .swiperControl .swiper-pagination .swiper-pagination-bullet {
+  background-color: var(--whiteColor);
+}
+.partners .inner {
+  background-color: var(--mainColor);
+  text-align: center;
+  padding: 24px;
+  height: 100%;
+}
+.partners .inner .subTitle {
+  color: var(--whiteColor);
+  font-weight: bold;
+  font-family: fontBold;
+  margin-bottom: 16px;
 }
 
 @media screen and (max-width: 768px) {

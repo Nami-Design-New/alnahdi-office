@@ -44,7 +44,6 @@ $(document).ready(function () {
       $("header").removeClass("headerAnimate");
     }
   });
-
   ////////////////////////////// ///////////////////////
   // Text Animation
   ////////////////////////////// ///////////////////////
@@ -191,7 +190,6 @@ $(document).ready(function () {
       });
     }
   });
-
   //history Slider
   var historySlider = new Swiper(".historySlider", {
     pagination: {
@@ -223,7 +221,6 @@ $(document).ready(function () {
       },
     },
   });
-
   // team slider
   var teamSlider = new Swiper(".teamSlider", {
     navigation: {
@@ -251,6 +248,96 @@ $(document).ready(function () {
   //     this.swiper.autoplay.start();
   //   }
   // );
+  //companySlider Slider
+  var companySlider = new Swiper(".companySlider", {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    pagination: {
+      el: ".companyPagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  //investmentsSlider Slider
+  var investmentsSlider = new Swiper(".investmentsSlider", {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    pagination: {
+      el: ".investmentsPagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      991: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  //partnersSlider Slider
+  var partnersSlider = new Swiper(".partnersSlider", {
+    // centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    speed: 1000,
+    pagination: {
+      el: ".partnersPagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      991: {
+        slidesPerView: 5,
+      },
+      1400: {
+        slidesPerView: 6,
+      },
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

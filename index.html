@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -20,6 +21,7 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- ================ loader ================= -->
   <div class="preloader">
@@ -40,18 +42,18 @@
         <ul class="navbar-nav">
           <a class="navLink active" href="index.html"> الرئيسية </a>
           <a class="navLink" href="#about"> من نحن </a>
-          <a class="navLink" href="#"> تاريخنا </a>
-          <a class="navLink" href="#"> فريقنا </a>
-          <a class="navLink" href="#"> الاستثمارات والشركات </a>
-          <a class="navLink" href="#"> شركاؤنا </a>
-          <a class="navLink" href="#"> معرض الصور </a>
+          <a class="navLink" href="#history"> تاريخنا </a>
+          <a class="navLink" href="#team"> فريقنا </a>
+          <a class="navLink" href="#investments"> الاستثمارات والشركات </a>
+          <a class="navLink" href="#partners"> شركاؤنا </a>
+          <!-- <a class="navLink" href="#"> معرض الصور </a> -->
           <a class="navLink" href="#"> اتصل بنا </a>
         </ul>
       </nav>
       <!-- Actions -->
       <div class="moreActions">
-        <a href="#!"> بحث <img src="img/icons/search.svg" alt=""></a>
-        <a href="#!"> EN </a>
+        <!-- <a href="#!"> بحث <img src="img/icons/search.svg" alt=""></a> -->
+        <a href="#!"> English </a>
       </div>
     </section>
   </header>
@@ -197,14 +199,15 @@
       </div>
     </section>
     <!-- history -->
-    <section class="history">
+    <section class="history" id="history">
       <div class="top">
-        <h2 class="title"> تاريــخنا </h2>
-        <p class="hint"> من صيدلية افتتحت أبوابها قبل أكثر من ثلاثين عام، حمل المؤسس عبدالله رؤية بعيدة المدى أضحت
+        <h2 class="title" data-aos="fade-up"> تاريــخنا </h2>
+        <p class="hint animate_words"> من صيدلية افتتحت أبوابها قبل أكثر من ثلاثين عام، حمل المؤسس عبدالله رؤية بعيدة
+          المدى أضحت
           هوية للنـهدي
           <span> من حلم الى حقيقة. </span>
         </p>
-        <div class="swiperControl">
+        <div class="swiperControl" data-aos="fade-up">
           <!-- <div class="historyPagination swiper-pagination"></div> -->
           <div class="swiperBtns">
             <div class="historyPrev swiper-button-prev"></div>
@@ -337,12 +340,15 @@
         </div>
       </div>
     </section>
-    <!--  -->
-    <section class="team">
+    <!-- team -->
+    <section class="team" id="team">
       <div class="container">
         <!-- Section Title -->
         <div class="SectionTitle">
-          <h2 class="title" data-aos="fade-up"> فريق مكتب العائلة </h2>
+          <h2 class="title" data-aos="fade-up"> فريق مكتب العائلة
+            <button class="btn btn-outline-dark" href="img/team/team.png" data-fancybox=""> عرض الهيكل التنظيمي
+            </button>
+          </h2>
           <div class="swiperControl" data-aos="fade-up">
             <!-- <div class="teamPagination swiper-pagination"></div> -->
             <div class="swiperBtns">
@@ -643,14 +649,136 @@
           </div>
         </div>
         <div class="quote">
-          <p class=" animate_words">
+          <p class=" animate_lines">
             تبدأ الإنجازات الكبيرة من الأحلام الطموحة. هذا ما نقوم به في مكتب عائلة النهدي، نحلم بمستقبل أكثر
             إشراقا. مستقبل مليء بالمبادرات التي تساهم في تقدم الإنسانية، وتحسين مستويات الحياة من خلال خدمات أفضل في
             مجال الرعاية الصحية، التكنولوجيا، التعليم والذكاء الاصطناعي، مستقبل يزخر بهذه المشاريع المدعومة من
             استثماراتنا.
-            <span> الشيخ عبدلله عامر النهدي            </span>
+            <span> الشيخ عبدلله عامر النهدي </span>
           </p>
         </div>
+    </section>
+    <!-- partners -->
+    <div class="investments" id="investments">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2 class="title" data-aos="fade-up"> الاستثمارات والشركات </h2>
+          <h5 class="sub" data-aos="fade-up"> كيــان ممـــتد </h5>
+          <h6 class="hint animate_lines"> قيم راسخة وأهداف نبيلة تدفع عائلة النهدي دومًا نحو التوسع والنمو، ورغم
+            أنها تعرف في المقام الأول عبر سلسلة الصيدليات، إلا أن كيان النهدي يمتد الى شركات واستثمارات محلية وعالمية
+            عديدة. يعمل مكتب العائلة على تخطيط عمل هذا الكيان وتنظيم وضبط أدائه بما يحقق صميم قيم العائلة وهو تحقيق
+            الفائدة للفرد والمجتمع.
+          </h6>
+        </div>
+        <div class="row">
+          <section class="col-md-6 p-2">
+            <div class="inner" data-aos="fade-up">
+              <h4 class="subTitle">
+                بعض استثماراتنا
+              </h4>
+              <div class="images">
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/1.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/2.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/3.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/4.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/5.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/6.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/7.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/investments/8.png" alt="">
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="col-md-6 p-2">
+            <div class="inner" data-aos="fade-up">
+              <h4 class="subTitle">
+                شركاتنا التابعة
+              </h4>
+              <div class="images">
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/company/1.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/company/2.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/company/3.png" alt="">
+                </a>
+                <a href="#!" target="_blank" class="logo" data-aos="fade-up">
+                  <img src="img/company/4.png" alt="">
+                </a>
+
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- partners -->
+    <section class="partners" id="partners">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2 class="title" data-aos="fade-up"> شركاؤنا </h2>
+          <h5 class="sub" data-aos="fade-up"> روابط من الثقة، نبني بها مستقبلًا أفضل </h5>
+          <h6 class="hint animate_lines">
+            عبر العلاقات و الشراكات المهمة طويلة الأمد، تعلَمنا أن شركائنا أهم أسباب تحقيقنا لأهدافنا وتخطي الصعاب، وأن
+            استيفائنا لكافة المسؤوليات تجاههم جعلتنا جديرين بثقتهم. ونود أن نقدم شكرنا لهم ولكل من عمل معنا على تكوين
+            مستقبلٍ أفضل.
+          </h6>
+        </div>
+        <div class="swiper partnersSlider ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="logo" data-aos="fade-up">
+                <img src="img/partners/1.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="logo" data-aos="fade-up">
+                <img src="img/partners/2.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="logo" data-aos="fade-up">
+                <img src="img/partners/3.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="logo" data-aos="fade-up">
+                <img src="img/partners/4.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="logo" data-aos="fade-up">
+                <img src="img/partners/5.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="logo" data-aos="fade-up">
+                <img src="img/partners/6.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="swiperControl d-xxl-none">
+            <div class="partnersPagination swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
     </section>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -741,4 +869,5 @@
   <script src="assets/js/SplitText.min.js"></script>
   <script src="js/custom.js"></script>
 </body>
+
 </html>
