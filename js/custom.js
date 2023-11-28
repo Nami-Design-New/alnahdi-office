@@ -191,6 +191,38 @@ $(document).ready(function () {
       });
     }
   });
+
+  //history Slider
+  var historySlider = new Swiper(".historySlider", {
+    pagination: {
+      el: ".historyPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".historyNext",
+      prevEl: ".historyPrev",
+    },
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    speed: 1000,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+      1400: {
+        slidesPerView: 5,
+      },
+      1800: {
+        slidesPerView: 6,
+      },
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
