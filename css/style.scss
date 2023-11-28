@@ -137,7 +137,7 @@ input {
 [type="number"],
 [type="tel"],
 [type="url"] {
-  direction: ltr;
+  direction: rtl;
 }
 .fancybox__track,
 .fancybox__content,
@@ -1260,6 +1260,7 @@ footer {
   position: relative;
   z-index: 2;
   padding: 100px 0 60px;
+  overflow: hidden;
   .sectionTitle {
     padding-bottom: 10px;
     margin-bottom: 8px;
@@ -1313,6 +1314,116 @@ footer {
       font-weight: bold;
       font-family: fontBold;
       margin-bottom: 16px;
+    }
+  }
+}
+.contactUs {
+  padding: 80px 0 0;
+  position: relative;
+  background: url(../img/BG.svg);
+  background-attachment: fixed;
+  background-size: 20px;
+  background-color: var(--mainColor05);
+  .sectionTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+    .title {
+      font-weight: bold;
+      color: var(--mainColor);
+      font-family: fontBold;
+    }
+    .hint{
+      color: var(--grayColor);
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-top: 30px;
+    .link {
+      display: flex;
+      width: fit-content;
+      gap: 12px;
+      path,
+      svg {
+        fill: var(--darkColor);
+      }
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid var(--darkColor);
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        color: var(--darkColor);
+        transition: var(--transition);
+        span {
+          color: var(--grayColor);
+        }
+      }
+      &:hover {
+        p {
+          color: var(--mainColor);
+        }
+      }
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: end;
+    .form-control {
+      border: none;
+      background: #fff;
+      border-radius: 0;
+      color: var(--darkColor);
+      min-height: 64px;
+      padding: 16px;
+    }
+    .btn {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: var(--mainColor);
+      color: var(--whiteColor);
+      border-radius: 0;
+      transition: var(--transition);
+      font-size: 16px;
+      text-transform: capitalize;
+      &:hover {
+        background: var(--goldColor);
+        gap: 16px;
+      }
+    }
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    padding-top: 40px;
+    iframe {
+      width: 100%;
+      height: 100%;
     }
   }
 }
