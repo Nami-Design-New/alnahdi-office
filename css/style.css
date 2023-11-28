@@ -701,6 +701,7 @@ header.headerAnimate {
   flex-direction: column;
   gap: 24px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1254901961);
+  border-radius: 12px;
 }
 @media screen and (max-width: 768px) {
   .vision .container .group {
@@ -723,7 +724,6 @@ header.headerAnimate {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  text-align: center;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
@@ -737,11 +737,15 @@ header.headerAnimate {
   border: 1px dashed var(--mainColor20);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   min-width: 150px;
+  border-radius: 12px;
 }
-.vision .container .values .value h5 {
+.vision .container .values .value h6 {
   font-weight: bold;
+}
+.vision .container .values .value p {
+  font-size: 14px;
 }
 
 .scrollDown {
@@ -828,13 +832,13 @@ header.headerAnimate {
   width: 2px;
   height: 150px;
   display: block;
-  border: 1px dashed #ebdeb9;
+  border: 1px dashed var(--mainColor20);
 }
 .history .swiper .swiper-slide::after {
   content: "";
   width: 100%;
   height: 2px;
-  border: 1px dotted #ebdeb9;
+  border: 1px dotted var(--mainColor20);
   position: absolute;
   top: 0;
   left: 0;
@@ -854,7 +858,7 @@ header.headerAnimate {
 }
 .history .swiper .swiper-slide .time p {
   margin: auto;
-  background-color: #fffdf7;
+  background-color: var(--whiteColor);
   flex: 1;
   padding: 20px 8px;
   width: 100%;
@@ -871,7 +875,7 @@ header.headerAnimate {
   -o-object-position: center;
      object-position: center;
   padding: 4px;
-  background-color: #fffdf7;
+  background-color: var(--whiteColor);
   border-radius: 12px;
 }
 .history .swiper .swiper-slide:nth-child(even)::before {
@@ -1059,6 +1063,7 @@ footer .border-top {
   background-attachment: fixed;
   border: 1px solid var(--secondColor);
   background-size: 20px;
+  overflow: hidden;
 }
 .team .SectionTitle {
   display: flex;

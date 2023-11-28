@@ -658,6 +658,7 @@ header {
       flex-direction: column;
       gap: 24px;
       box-shadow: 0px 4px 24px #00000020;
+      border-radius: 12px;
       @media screen and (max-width: 768px) {
         padding: 16px;
         box-shadow: 0px 4px 12px #00000020;
@@ -678,7 +679,7 @@ header {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      text-align: center;
+      // text-align: center;
       justify-content: center;
       @media screen and (max-width: 768px) {
         gap: 8px;
@@ -689,10 +690,14 @@ header {
         border: 1px dashed var(--mainColor20);
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
         min-width: 150px;
-        h5 {
+        border-radius: 12px;
+        h6 {
           font-weight: bold;
+        }
+        p{
+          font-size: 14px;
         }
       }
     }
@@ -742,7 +747,7 @@ header {
   flex-direction: column;
   padding: 80px 0;
   text-align: center;
-  background-color: var(--secondColor);
+  background-color: var(--secondColor)                            ;
   .top {
     width: min(100% - 24px, 500px);
     margin: auto;
@@ -776,13 +781,13 @@ header {
         width: 2px;
         height: 150px;
         display: block;
-        border: 1px dashed #ebdeb9;
+        border: 1px dashed var(--mainColor20);
       }
       &::after {
         content: "";
         width: 100%;
         height: 2px;
-        border: 1px dotted #ebdeb9;
+        border: 1px dotted var(--mainColor20);
         position: absolute;
         top: 0;
         left: 0;
@@ -802,7 +807,7 @@ header {
         }
         p {
           margin: auto;
-          background-color: #fffdf7;
+          background-color: var(--whiteColor);
           flex: 1;
           padding: 20px 8px;
           width: 100%;
@@ -817,7 +822,7 @@ header {
           object-fit: cover;
           object-position: center;
           padding: 4px;
-          background-color: #fffdf7;
+          background-color: var(--whiteColor);
           border-radius: 12px;
         }
       }
@@ -1002,6 +1007,7 @@ footer {
   background-attachment: fixed;
   border: 1px solid var(--secondColor);
   background-size: 20px;
+  overflow: hidden;
   .SectionTitle {
     display: flex;
     justify-content: space-between;
