@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --mainColor: #5c6068;
   --mainColor20: #dbdcdf;
@@ -204,7 +205,7 @@ button {
 }
 
 content {
-  min-height: calc(100dvh - 313px);
+  min-height: calc(100dvh - 320px);
   display: flex;
   flex-direction: column;
 }
@@ -740,12 +741,25 @@ header.headerAnimate {
   gap: 4px;
   min-width: 150px;
   border-radius: 12px;
+  transition: var(--transition);
 }
 .vision .container .values .value h6 {
   font-weight: bold;
+  transition: var(--transition);
 }
 .vision .container .values .value p {
   font-size: 14px;
+  transition: var(--transition);
+}
+.vision .container .values .value:hover {
+  background-color: var(--goldColor);
+  transform: translateY(-5px);
+}
+.vision .container .values .value:hover h6 {
+  color: white;
+}
+.vision .container .values .value:hover p {
+  color: white;
 }
 
 .scrollDown {
@@ -793,14 +807,14 @@ header.headerAnimate {
 .history {
   display: flex;
   flex-direction: column;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
   background-color: var(--secondColor);
 }
 .history .top {
   width: min(100% - 24px, 500px);
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 .history .top .hint {
   color: var(--grayColor);
@@ -830,7 +844,7 @@ header.headerAnimate {
 .history .swiper .swiper-slide::before {
   content: "";
   width: 2px;
-  height: 150px;
+  height: 75px;
   display: block;
   border: 1px dashed var(--mainColor20);
 }
@@ -879,10 +893,11 @@ header.headerAnimate {
   border-radius: 12px;
 }
 .history .swiper .swiper-slide:nth-child(even)::before {
-  height: 50px;
+  height: 24px;
 }
 .history .swiperControl {
   justify-content: center;
+  padding: 8px;
 }
 
 .swiperControl {
@@ -1041,6 +1056,8 @@ footer .link p {
   gap: 0px;
   color: var(--mainColor);
   transition: var(--transition);
+  direction: ltr;
+  cursor: pointer;
 }
 footer .link a span,
 footer .link p span {
@@ -1436,11 +1453,12 @@ footer .border-top {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  color: var(--darkColor);
   transition: var(--transition);
+  color: var(--grayColor);
 }
 .contactUs .info .link p span {
-  color: var(--grayColor);
+  color: var(--darkColor);
+  direction: ltr;
 }
 .contactUs .info .link:hover p {
   color: var(--mainColor);
@@ -1509,4 +1527,208 @@ footer .border-top {
   body {
     font-size: 14px;
   }
+}
+.galleryPage {
+  padding: 20px 0 0px;
+}
+.galleryPage .inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.galleryPage .inner a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  min-width: 20vw;
+  border: 3px solid var(--secondColor30);
+  position: relative;
+}
+.galleryPage .inner a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.galleryPage .inner a .title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 8px 16px;
+  z-index: 3;
+  color: var(--whiteColor);
+  background-color: rgba(92, 96, 104, 0.4392156863);
+}
+.galleryPage .inner a:nth-child(4n) {
+  min-width: 40vw;
+}
+@media (max-width: 768px) {
+  .galleryPage .inner a {
+    height: 200px;
+    min-width: 40vw;
+  }
+  .galleryPage .inner a:nth-child(4n) {
+    min-width: 60vw;
+  }
+}
+@media (max-width: 768px) {
+  .galleryPage .inner {
+    gap: 4px;
+  }
+}
+
+.banner {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.0549019608), #ffffff), url(../img/BG.svg) !important;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 50px;
+  position: relative;
+  display: flex;
+  background-size: 40px;
+}
+@media (max-width: 768px) {
+  .banner {
+    padding: 120px 0 30px;
+  }
+}
+.banner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner .links a {
+  padding: 4px;
+  position: relative;
+  color: var(--darkColor);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: capitalize;
+}
+.banner .links a:last-child::after {
+  display: none;
+}
+.banner .links a::after {
+  content: " ↣ ";
+  transform: scaleX(-1);
+}
+.banner .links a.active {
+  cursor: default;
+  color: var(--grayColor);
+}
+.banner h2 {
+  font-weight: bold;
+  color: var(--darkColor);
+  text-transform: capitalize;
+  font-family: "fontBold", sans-serif;
+}
+
+.careerPage {
+  padding: 0 0 48px;
+}
+.careerPage .job {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  height: 100%;
+  border: 1px dashed var(--mainColor20);
+  border-radius: 8px;
+}
+.careerPage .job img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: var(--secondColor);
+  border-radius: 8px 8px 0 0;
+}
+.careerPage .job .text {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+.careerPage .job .text .jobTitle {
+  font-weight: bold;
+  color: var(--darkColor);
+}
+.careerPage .job .text .des {
+  font-size: 13px;
+  flex: 1;
+}
+.careerPage .job .text a {
+  margin-top: 16px;
+  text-align: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  background-color: var(--mainColor05);
+  border-radius: 8px;
+}
+
+.careersForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  background-color: var(--secondColor);
+  border-radius: 8px;
+  position: sticky;
+  top: 120px;
+}
+.careersForm .title {
+  font-family: "fontBold", Sans-serif;
+  color: var(--mainColor);
+  text-transform: none;
+}
+.careersForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.careersForm form label {
+  font-family: "fontBold", Sans-serif;
+  font-size: 14px;
+}
+.careersForm form .send {
+  background-color: var(--mainColor);
+  padding: 16px;
+  width: min(100% - 24px, 300px);
+  margin: auto;
+  color: var(--whiteColor);
+  border-radius: 100px;
+}
+
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--image-clip {
+  direction: ltr !important;
+}
+
+.jobDetails .details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.jobDetails .details .jobImg {
+  width: 100%;
+  aspect-ratio: 3/2;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.jobDetails .details .jobTitle {
+  font-weight: bold;
+  margin: 8px 0;
+  color: var(--darkColor);
 }/*# sourceMappingURL=style.css.map */

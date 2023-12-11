@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary Meta Tags -->
-  <title> النهدي </title>
-  <meta name="title" content="النهدي">
+  <title> مكتب عائلة النهدي </title>
+  <meta name="title" content="مكتب عائلة النهدي">
   <meta name="description" content="">
   <!-- Light Theme Favicon -->
   <link rel="icon" type="image/x-icon" href="img/fav.svg" id="browser-light-theme-favicon" />
@@ -21,7 +20,6 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <!-- ================ loader ================= -->
   <div class="preloader">
@@ -40,14 +38,15 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <ul class="navbar-nav">
-          <a class="navLink active" href="index.html"> الرئيسية </a>
-          <a class="navLink" href="#about"> من نحن </a>
-          <a class="navLink" href="#history"> تاريخنا </a>
-          <a class="navLink" href="#team"> فريقنا </a>
-          <a class="navLink" href="#investments"> الاستثمارات والشركات </a>
-          <a class="navLink" href="#partners"> شركاؤنا </a>
-          <!-- <a class="navLink" href="#"> معرض الصور </a> -->
-          <a class="navLink" href="#contactUs"> اتصل بنا </a>
+          <a class="navLink" id="home-nav" href="index.html#home"> الرئيسية </a>
+          <a class="navLink" id="about-nav" href="index.html#about"> من نحن </a>
+          <a class="navLink" id="history-nav" href="index.html#history"> تاريخنا </a>
+          <a class="navLink" id="team-nav" href="index.html#team"> فريقنا </a>
+          <a class="navLink" id="investments-nav" href="index.html#investments"> الاستثمارات والشركات </a>
+          <a class="navLink" id="partners-nav" href="index.html#partners"> شركاؤنا </a>
+          <a class="navLink" id="gallery-nav" href="gallery.html#"> معرض الصور </a>
+          <a class="navLink" id="career-nav" href="career.html#"> الوظائف </a>
+          <a class="navLink" id="contactUs-nav" href="index.html#contactUs"> اتصل بنا </a>
         </ul>
       </nav>
       <!-- Actions -->
@@ -62,7 +61,7 @@
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
     <!-- hearo -->
-    <section class="hearo">
+    <section class="active-nav-class hearo" id="home">
       <div class="container">
         <div class="hearoImg">
           <img src="img/hearo.svg" loading="lazy" alt="">
@@ -81,7 +80,7 @@
       </div>
     </section>
     <!-- about  -->
-    <section class="aboutPage" id="about">
+    <section class="active-nav-class aboutPage" id="about">
       <div class="container">
         <section class="row">
           <div class="col-md-6 p-0">
@@ -157,7 +156,7 @@
         <div class="row">
           <div class="col-md-6 p-2 p-md-3">
             <div class="group" data-aos="fade-up">
-              <h3><img src="img/icons/Vision.png" loading="lazy" alt=""> رؤيتنا</h3>
+              <h3><img src="img/icons/vision.svg" loading="lazy" alt=""> رؤيتنا</h3>
               <p>
                 أن نكون مكتبًا عائليًا على مستوى عالمي، موثوق من قبل شركائنا ويطبق أفضل الممارسات في المجالات التي نعمل
                 بها.
@@ -166,7 +165,7 @@
           </div>
           <div class="col-md-6 p-2 p-md-3">
             <div class="group" data-aos="fade-up">
-              <h3><img src="img/icons/Mission.png" loading="lazy" alt=""> مهمتنا</h3>
+              <h3><img src="img/icons/Mission.svg" loading="lazy" alt=""> مهمتنا</h3>
               <p>
                 تحقيق طموح العائلة ودفع عجلة النمو المؤسسي وضمان استدامته مستقبلًا.
               </p>
@@ -174,7 +173,7 @@
           </div>
           <div class="col-md-12 p-2 p-md-3">
             <div class="group" data-aos="fade-up">
-              <h3><img src="img/icons/Passion.png" loading="lazy" alt=""> قيمنا </h3>
+              <h3><img src="img/icons/Passion.svg" loading="lazy" alt=""> قيمنا </h3>
               <div class="values">
                 <div class="value">
                   <h6> النزاهة </h6>
@@ -199,7 +198,7 @@
       </div>
     </section>
     <!-- history -->
-    <section class="history" id="history">
+    <section class="active-nav-class history" id="history">
       <div class="top">
         <h2 class="title" data-aos="fade-up"> تاريــخنا </h2>
         <p class="hint animate_words"> من صيدلية افتتحت أبوابها قبل أكثر من ثلاثين عام، حمل المؤسس عبدالله رؤية بعيدة
@@ -341,312 +340,14 @@
       </div>
     </section>
     <!-- team -->
-    <section class="team" id="team">
+    <section class="active-nav-class team" id="team">
       <div class="container">
         <!-- Section Title -->
-        <div class="SectionTitle">
-          <h2 class="title" data-aos="fade-up"> فريق مكتب العائلة
+        <div class="SectionTitle justify-content-center">
+          <h2 class="title d-flex flex-column" data-aos="fade-up"> فريق مكتب العائلة
             <button class="btn btn-outline-dark" href="img/team/team.png" data-fancybox=""> عرض الهيكل التنظيمي
             </button>
           </h2>
-          <div class="swiperControl" data-aos="fade-up">
-            <!-- <div class="teamPagination swiper-pagination"></div> -->
-            <div class="swiperBtns">
-              <div class="teamPrev swiper-button-prev"></div>
-              <div class="teamNext swiper-button-next"></div>
-            </div>
-          </div>
-        </div>
-        <!-- slider -->
-        <div class="swiper teamSlider">
-          <div class="swiper-wrapper">
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/1.jpg)">
-                  <div class="content">
-                    <h5 class="title"> الشيخ عبدالله عامر النهدي </h5>
-                    <span class="job"> المؤسس ورئيس مجلس الإدارة لمكتب عائلة النهدي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> الشيخ عبدالله عامر النهدي </h4>
-                    <span class="job"> المؤسس ورئيس مجلس الإدارة لمكتب عائلة النهدي </span>
-                    <p class="des"> مؤسس أضخم سلسلة صيدليات في المملكة العربية السعودية ومشاريع ريادية أخرى، تخرج من
-                      جامعة الملك عبد
-                      العزيز في الاقتصاد والإدارة عام 1985م، وهو عضو مؤسس في مجلس إدارة مركز الملك سلمان لأبحاث الإعاقة،
-                      كما انه عضو في مجلس الوقف العلمي في جده.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/2.jpg)">
-                  <div class="content">
-                    <h5 class="title"> عامر عبدالله النهدي </h5>
-                    <span class="job"> نائب رئيس مجلس الإدارة ونائب رئيس مكتب عائلة النهدي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> عامر عبدالله النهدي </h4>
-                    <span class="job"> نائب رئيس مجلس الإدارة ونائب رئيس مكتب عائلة النهدي </span>
-                    <p class="des">
-                      رائد أعمال متمرس، ترأس وقاد العديد من فرص الاستثمارات والشراكات، مسيرته بدأت بعد إكمال تخصصه في
-                      إدارة الأعمال من جامعة متروبوليتان في لندن،بالإضافة لكونه عضوًا في مجلس إدارة شركة النهدي الطبية.
-                      و تولى العديد من الأدوار الهامة مثل قيادة تأسيس شركة النهدي للنقليات.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/3.jpg)">
-                  <div class="content">
-                    <h5 class="title"> عبد الرحمن عبد الله النـهدي </h5>
-                    <span class="job"> عضو مجلس عائلة النهدي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> عبد الرحمن عبد الله النـهدي </h4>
-                    <span class="job"> عضو مجلس عائلة النهدي </span>
-                    <p class="des">
-                      تخرج عبد الرحمن من جامعة أنجليا روسكين بلندن في إدارة الأعمال الدولية عام 2018 ، ثم انضم إلى شركة
-                      النهدي الطبية وأصبح جزءًا من فريق تطوير الأعمال ومسؤولًا عن توسيع شبكة الفروع وتحسينها. في عام
-                      2020 ، تولى دورًا إضافيًا كعضو في مكتب عائلة النهدي. كما انه عضو نشط في فريق الاستثمار ، وله علاقة
-                      خاصة بالعمل الخيري ويقود العمل العائلي في هذا المجال.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/4.jpg)">
-                  <div class="content">
-                    <h5 class="title"> سعيد صالح الحمدان </h5>
-                    <span class="job"> الرئيس التنفيذي لمكتب عائلة النهدي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> سعيد صالح الحمدان </h4>
-                    <span class="job"> الرئيس التنفيذي لمكتب عائلة النهدي </span>
-                    <p class="des">
-                      أكثر من 22 عامًا من الخبرة في الإدارة المالية والاستراتيجية، حيث شغل عدداً من المناصب القيادية في
-                      القطاعين الخاص والحكومي حاصل على بكالوريس المحاسبة من جامعة الملك فهد للبترول والمعادن وماجستير في
-                      إدارة الأعمال، كما أنه عضو نشط في العديد من المجالس ولجان التدقيق والمخاطر.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/5.jpg)">
-                  <div class="content">
-                    <h5 class="title"> محمد يحيى الغالبي </h5>
-                    <span class="job"> مدير عام الاستثمار المحلي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> محمد يحيى الغالبي </h4>
-                    <span class="job"> مدير عام الاستثمار المحلي </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/6.jpg)">
-                  <div class="content">
-                    <h5 class="title"> نوار الشرخي </h5>
-                    <span class="job"> مدير عام الاستثمار الدولي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> نوار الشرخي </h4>
-                    <span class="job"> مدير عام الاستثمار الدولي </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/7.jpg)">
-                  <div class="content">
-                    <h5 class="title"> لميا حاتم كردي </h5>
-                    <span class="job"> مدير عام الخدمات المشتركة </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> لميا حاتم كردي </h4>
-                    <span class="job"> مدير عام الخدمات المشتركة </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/8.jpg)">
-                  <div class="content">
-                    <h5 class="title"> فارح أدم الصومالي </h5>
-                    <span class="job"> مدير المالية و الحسابات </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> فارح أدم الصومالي </h4>
-                    <span class="job"> مدير المالية و الحسابات </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/9.jpg)">
-                  <div class="content">
-                    <h5 class="title"> علي محمد القحطاني </h5>
-                    <span class="job"> مدير الحوكمة </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> علي محمد القحطاني </h4>
-                    <span class="job"> مدير الحوكمة </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/10.jpg)">
-                  <div class="content">
-                    <h5 class="title"> محمد خضر حمودة </h5>
-                    <span class="job"> مدير تكنولوجيا المعلومات </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> محمد خضر حمودة </h4>
-                    <span class="job"> مدير تكنولوجيا المعلومات </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/11.jpg)">
-                  <div class="content">
-                    <h5 class="title"> عهود طلال باويان </h5>
-                    <span class="job"> قيادة الناس ومكان العمل </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> عهود طلال باويان </h4>
-                    <span class="job"> قيادة الناس ومكان العمل </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/12.jpg)">
-                  <div class="content">
-                    <h5 class="title"> ياسر سامي النجيمي </h5>
-                    <span class="job"> محلل الاستثمار </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> ياسر سامي النجيمي </h4>
-                    <span class="job"> محلل الاستثمار </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- slide -->
-            <div class="swiper-slide">
-              <div class="flipCard" data-aos="zoom-in-up">
-                <div class="cardFront"
-                  style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/13.jpg)">
-                  <div class="content">
-                    <h5 class="title"> فؤاد إبراهيم قيسي </h5>
-                    <span class="job"> ممثل مكتب عائلة النهدي </span>
-                  </div>
-                </div>
-                <div class="cardBack">
-                  <div class="content">
-                    <img src="img/fav.svg" loading="lazy" alt="">
-                    <h4 class="title"> فؤاد إبراهيم قيسي </h4>
-                    <span class="job"> ممثل مكتب عائلة النهدي </span>
-                    <p class="des">
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="quote">
           <p class=" animate_lines">
@@ -657,9 +358,297 @@
             <span> الشيخ عبدلله عامر النهدي </span>
           </p>
         </div>
+        <!-- slide -->
+        <div class=" col-sm-6 col-lg-4 col-xl-3 p-2 m-auto my-4">
+          <div class="flipCard m-auto w-100" data-aos="fade-up">
+            <div class="cardFront"
+              style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/1.jpg)">
+              <div class="content">
+                <h5 class="title"> الشيخ عبدالله عامر النهدي </h5>
+                <span class="job"> المؤسس ورئيس مجلس الإدارة لمكتب عائلة النهدي </span>
+              </div>
+            </div>
+            <div class="cardBack">
+              <div class="content">
+                <img src="img/fav.svg" loading="lazy" alt="">
+                <h4 class="title"> الشيخ عبدالله عامر النهدي </h4>
+                <span class="job"> المؤسس ورئيس مجلس الإدارة لمكتب عائلة النهدي </span>
+                <p class="des"> مؤسس أضخم سلسلة صيدليات في المملكة العربية السعودية ومشاريع ريادية أخرى، تخرج من
+                  جامعة الملك عبد
+                  العزيز في الاقتصاد والإدارة عام 1985م، وهو عضو مؤسس في مجلس إدارة مركز الملك سلمان لأبحاث الإعاقة،
+                  كما انه عضو في مجلس الوقف العلمي في جده.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center pb-5">
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/2.jpg)">
+                <div class="content">
+                  <h5 class="title"> عامر عبدالله النهدي </h5>
+                  <span class="job"> نائب رئيس مجلس الإدارة ونائب رئيس مكتب عائلة النهدي </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> عامر عبدالله النهدي </h4>
+                  <span class="job"> نائب رئيس مجلس الإدارة ونائب رئيس مكتب عائلة النهدي </span>
+                  <p class="des">
+                    رائد أعمال متمرس، ترأس وقاد العديد من فرص الاستثمارات والشراكات، مسيرته بدأت بعد إكمال تخصصه في
+                    إدارة الأعمال من جامعة متروبوليتان في لندن،بالإضافة لكونه عضوًا في مجلس إدارة شركة النهدي الطبية.
+                    و تولى العديد من الأدوار الهامة مثل قيادة تأسيس شركة النهدي للنقليات.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/3.jpg)">
+                <div class="content">
+                  <h5 class="title"> عبد الرحمن عبد الله النـهدي </h5>
+                  <span class="job"> عضو مجلس عائلة النهدي </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> عبد الرحمن عبد الله النـهدي </h4>
+                  <span class="job"> عضو مجلس عائلة النهدي </span>
+                  <p class="des">
+                    تخرج عبد الرحمن من جامعة أنجليا روسكين بلندن في إدارة الأعمال الدولية عام 2018 ، ثم انضم إلى شركة
+                    النهدي الطبية وأصبح جزءًا من فريق تطوير الأعمال ومسؤولًا عن توسيع شبكة الفروع وتحسينها. في عام
+                    2020 ، تولى دورًا إضافيًا كعضو في مكتب عائلة النهدي. كما انه عضو نشط في فريق الاستثمار ، وله علاقة
+                    خاصة بالعمل الخيري ويقود العمل العائلي في هذا المجال.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/4.jpg)">
+                <div class="content">
+                  <h5 class="title"> سعيد صالح الحمدان </h5>
+                  <span class="job"> الرئيس التنفيذي لمكتب عائلة النهدي </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> سعيد صالح الحمدان </h4>
+                  <span class="job"> الرئيس التنفيذي لمكتب عائلة النهدي </span>
+                  <p class="des">
+                    أكثر من 22 عامًا من الخبرة في الإدارة المالية والاستراتيجية، حيث شغل عدداً من المناصب القيادية في
+                    القطاعين الخاص والحكومي حاصل على بكالوريس المحاسبة من جامعة الملك فهد للبترول والمعادن وماجستير في
+                    إدارة الأعمال، كما أنه عضو نشط في العديد من المجالس ولجان التدقيق والمخاطر.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/5.jpg)">
+                <div class="content">
+                  <h5 class="title"> محمد يحيى الغالبي </h5>
+                  <span class="job"> مدير عام الاستثمار المحلي </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> محمد يحيى الغالبي </h4>
+                  <span class="job"> مدير عام الاستثمار المحلي </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/6.jpg)">
+                <div class="content">
+                  <h5 class="title"> نوار الشرخي </h5>
+                  <span class="job"> مدير عام الاستثمار الدولي </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> نوار الشرخي </h4>
+                  <span class="job"> مدير عام الاستثمار الدولي </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/7.jpg)">
+                <div class="content">
+                  <h5 class="title"> لميا حاتم كردي </h5>
+                  <span class="job"> مدير عام الخدمات المشتركة </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> لميا حاتم كردي </h4>
+                  <span class="job"> مدير عام الخدمات المشتركة </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/8.jpg)">
+                <div class="content">
+                  <h5 class="title"> فارح أدم الصومالي </h5>
+                  <span class="job"> مدير المالية و الحسابات </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> فارح أدم الصومالي </h4>
+                  <span class="job"> مدير المالية و الحسابات </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/9.jpg)">
+                <div class="content">
+                  <h5 class="title"> علي محمد القحطاني </h5>
+                  <span class="job"> مدير الحوكمة </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> علي محمد القحطاني </h4>
+                  <span class="job"> مدير الحوكمة </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/10.jpg)">
+                <div class="content">
+                  <h5 class="title"> محمد خضر حمودة </h5>
+                  <span class="job"> مدير تكنولوجيا المعلومات </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> محمد خضر حمودة </h4>
+                  <span class="job"> مدير تكنولوجيا المعلومات </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/11.jpg)">
+                <div class="content">
+                  <h5 class="title"> عهود طلال باويان </h5>
+                  <span class="job"> قيادة الناس ومكان العمل </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> عهود طلال باويان </h4>
+                  <span class="job"> قيادة الناس ومكان العمل </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/12.jpg)">
+                <div class="content">
+                  <h5 class="title"> ياسر سامي النجيمي </h5>
+                  <span class="job"> محلل الاستثمار </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> ياسر سامي النجيمي </h4>
+                  <span class="job"> محلل الاستثمار </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- slide -->
+          <div class=" col-sm-6 col-lg-4 col-xl-3 p-2">
+            <div class="flipCard m-auto w-100" data-aos="fade-up">
+              <div class="cardFront"
+                style="background: linear-gradient(to top, #5c6068 10%, #5c606846 ,#5c606800 ), url(img/team/13.jpg)">
+                <div class="content">
+                  <h5 class="title"> فؤاد إبراهيم قيسي </h5>
+                  <span class="job"> ممثل مكتب عائلة النهدي </span>
+                </div>
+              </div>
+              <div class="cardBack">
+                <div class="content">
+                  <img src="img/fav.svg" loading="lazy" alt="">
+                  <h4 class="title"> فؤاد إبراهيم قيسي </h4>
+                  <span class="job"> ممثل مكتب عائلة النهدي </span>
+                  <p class="des">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
-    <!-- partners -->
-    <div class="investments" id="investments">
+    <!-- investments -->
+    <div class="active-nav-class investments" id="investments">
       <div class="container">
         <div class="sectionTitle">
           <h2 class="title" data-aos="fade-up"> الاستثمارات والشركات </h2>
@@ -722,7 +711,6 @@
                 <a href="#!" target="_blank" class="logo" data-aos="fade-up">
                   <img src="img/company/4.png" loading="lazy" alt="">
                 </a>
-
               </div>
             </div>
           </section>
@@ -730,7 +718,7 @@
       </div>
     </div>
     <!-- partners -->
-    <section class="partners" id="partners">
+    <section class="active-nav-class partners" id="partners">
       <div class="container">
         <div class="sectionTitle">
           <h2 class="title" data-aos="fade-up"> شركـــاؤنا </h2>
@@ -781,7 +769,7 @@
       </div>
     </section>
     <!-- contactUs -->
-    <section id="contactUs" class="contactUs">
+    <section class="active-nav-class contactUs" id="contactUs">
       <div class="container">
         <div class="sectionTitle">
           <h1 class="title"> اتصـل بنــــــا </h1>
@@ -791,7 +779,6 @@
         <div class="row">
           <div class="col-md-6 p-2">
             <div class="info">
-
               <a href="https://maps.app.goo.gl/aAhE93yxV9sdc6rw8" class="link" target="_blank">
                 <div class="icon">
                   <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1"
@@ -802,9 +789,28 @@
                   </svg>
                 </div>
                 <p>
-                  <span> موقعنا </span>
-                  2444 THE HEADQUARTER
-                  BUSINESS PARK JEDDAH, KSA
+                  موقعنا
+                  <span>
+                    2444 THE HEADQUARTER
+                    BUSINESS PARK JEDDAH, KSA
+                  </span>
+                </p>
+              </a>
+              <a href="https://www.linkedin.com/company/alnahdi-office/" class="link" target="_blank">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="512" height="512" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512"
+                    xml:space="preserve">
+                    <g>
+                      <path
+                        d="M90 90V60.7c0-14.4-3.1-25.4-19.9-25.4-8.1 0-13.5 4.4-15.7 8.6h-.2v-7.3H38.3V90h16.6V63.5c0-7 1.3-13.7 9.9-13.7 8.5 0 8.6 7.9 8.6 14.1v26H90zM11.3 36.6h16.6V90H11.3zM19.6 10c-5.3 0-9.6 4.3-9.6 9.6s4.3 9.7 9.6 9.7 9.6-4.4 9.6-9.7-4.3-9.6-9.6-9.6z"
+                        fill="#000000" opacity="1" data-original="#000000"></path>
+                    </g>
+                  </svg>
+                </div>
+                <p>
+                  لينكيد ان
+                  <span> Alnahdi Holding Company Ltd. </span>
                 </p>
               </a>
               <a href="tel:+966125782222" class="link" target="_blank">
@@ -820,8 +826,8 @@
                   </svg>
                 </div>
                 <p>
-                  <span> الهاتف </span>
-                  +966125782222
+                  الهاتف
+                  <span> +966125782222 </span>
                 </p>
               </a>
               <a href="mailto:info@alnahdi-office.com" class="link" target="_blank">
@@ -837,12 +843,10 @@
                   </svg>
                 </div>
                 <p>
-                  <span> البريد الالكتروني </span>
-                  info@alnahdi-office.com
+                  البريد الالكتروني
+                  <span> info@alnahdi-office.com </span>
                 </p>
               </a>
-
-
             </div>
           </div>
           <div class="col-md-6 p-2">
@@ -863,7 +867,6 @@
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -876,14 +879,15 @@
           <img src="img/logoH2.svg" loading="lazy" alt="">
         </div>
         <div class=" p-3 d-flex flex-wrap gap-3 ">
-          <a href="index.html"> الرئيسية </a>
-          <a href="#about"> من نحن </a>
-          <a href="#history"> تاريخنا </a>
-          <a href="#team"> فريقنا </a>
-          <a href="#partners"> الاستثمارات والشركات </a>
-          <a href="#partners"> شركاؤنا </a>
-          <!-- <a href="#"> معرض الصور </a> -->
-          <a href="#contactUs"> اتصل بنا </a>
+          <a  href="index.html#home"> الرئيسية </a>
+          <a  href="index.html#about"> من نحن </a>
+          <a  href="index.html#history"> تاريخنا </a>
+          <a  href="index.html#team"> فريقنا </a>
+          <a  href="index.html#investments"> الاستثمارات والشركات </a>
+          <a  href="index.html#partners"> شركاؤنا </a>
+          <a  href="gallery.html#"> معرض الصور </a>
+          <a  href="career.html#"> الوظائف </a>
+          <a  href="index.html#contactUs"> اتصل بنا </a>
         </div>
       </div>
       <div class="d-flex gap-4 flex-wrap justify-content-between  pt-4 mt-3 px-3 border-top align-items-center">
@@ -899,6 +903,22 @@
           <p>
             2444 THE HEADQUARTER
             BUSINESS PARK JEDDAH, KSA
+          </p>
+        </a>
+        <a href="https://www.linkedin.com/company/alnahdi-office/" class="link" target="_blank">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+              height="512" x="0" y="0" viewBox="0 0 100 100" style="enable-background:new 0 0 512 512"
+              xml:space="preserve">
+              <g>
+                <path
+                  d="M90 90V60.7c0-14.4-3.1-25.4-19.9-25.4-8.1 0-13.5 4.4-15.7 8.6h-.2v-7.3H38.3V90h16.6V63.5c0-7 1.3-13.7 9.9-13.7 8.5 0 8.6 7.9 8.6 14.1v26H90zM11.3 36.6h16.6V90H11.3zM19.6 10c-5.3 0-9.6 4.3-9.6 9.6s4.3 9.7 9.6 9.7 9.6-4.4 9.6-9.7-4.3-9.6-9.6-9.6z"
+                  fill="#000000" opacity="1" data-original="#000000"></path>
+              </g>
+            </svg>
+          </div>
+          <p>
+            Alnahdi Holding Company Ltd.
           </p>
         </a>
         <a href="tel:+966125782222" class="link" target="_blank">
@@ -953,5 +973,4 @@
   <script src="assets/js/SplitText.min.js"></script>
   <script src="js/custom.js"></script>
 </body>
-
 </html>

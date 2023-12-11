@@ -170,7 +170,7 @@ button {
   }
 }
 content {
-  min-height: calc(100dvh - 313px);
+  min-height: calc(100dvh - 320px);
   display: flex;
   flex-direction: column;
 }
@@ -693,11 +693,24 @@ header {
         gap: 4px;
         min-width: 150px;
         border-radius: 12px;
+        transition: var(--transition);
         h6 {
           font-weight: bold;
+          transition: var(--transition);
         }
         p {
           font-size: 14px;
+          transition: var(--transition);
+        }
+        &:hover {
+          background-color: var(--goldColor);
+          transform: translateY(-5px);
+          h6 {
+            color: white;
+          }
+          p {
+            color: white;
+          }
         }
       }
     }
@@ -745,13 +758,13 @@ header {
 .history {
   display: flex;
   flex-direction: column;
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
   background-color: var(--secondColor);
   .top {
     width: min(100% - 24px, 500px);
     margin: auto;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
     .hint {
       color: var(--grayColor);
       span {
@@ -779,7 +792,7 @@ header {
       &::before {
         content: "";
         width: 2px;
-        height: 150px;
+        height: 75px;
         display: block;
         border: 1px dashed var(--mainColor20);
       }
@@ -829,13 +842,14 @@ header {
       &:nth-child(even) {
         // flex-direction: column-reverse;
         &::before {
-          height: 50px;
+          height: 24px;
         }
       }
     }
   }
   .swiperControl {
     justify-content: center;
+    padding: 8px;
   }
 }
 .swiperControl {
@@ -983,6 +997,8 @@ footer {
       gap: 0px;
       color: var(--mainColor);
       transition: var(--transition);
+      direction: ltr;
+      cursor: pointer;
       span {
         color: var(--mainColor);
       }
@@ -1324,7 +1340,7 @@ footer {
   background-attachment: fixed;
   background-size: 20px;
   background-color: var(--mainColor05);
-  .sectionTitle{
+  .sectionTitle {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -1334,11 +1350,10 @@ footer {
       color: var(--mainColor);
       font-family: fontBold;
     }
-    .hint{
+    .hint {
       color: var(--grayColor);
     }
   }
-
   .info {
     display: flex;
     flex-direction: column;
@@ -1374,10 +1389,11 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 0px;
-        color: var(--darkColor);
         transition: var(--transition);
+        color: var(--grayColor);
         span {
-          color: var(--grayColor);
+          color: var(--darkColor);
+          direction: ltr;
         }
       }
       &:hover {
@@ -1450,5 +1466,205 @@ footer {
   p,
   body {
     font-size: 14px;
+  }
+}
+.galleryPage {
+  padding: 20px 0 00px;
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      min-width: 20vw;
+      border: 3px solid var(--secondColor30);
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+      .title {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        padding: 8px 16px;
+        z-index: 3;
+        color: var(--whiteColor);
+        background-color: #5c606870;
+      }
+      &:nth-child(4n) {
+        min-width: 40vw;
+      }
+      @media (max-width: 768px) {
+        height: 200px;
+        min-width: 40vw;
+        &:nth-child(4n) {
+          min-width: 60vw;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      gap: 4px;
+    }
+  }
+}
+.banner {
+  background-image: linear-gradient(#ffffff0e, #ffffff), url(../img/BG.svg) !important;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 50px;
+  position: relative;
+  display: flex;
+  background-size: 40px;
+  @media (max-width: 768px) {
+    padding: 120px 0 30px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .links {
+    a {
+      padding: 4px;
+      position: relative;
+      color: var(--darkColor);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: capitalize;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      &::after {
+        content: " ↣ ";
+        transform: scaleX(-1);
+      }
+      &.active {
+        cursor: default;
+        color: var(--grayColor);
+      }
+    }
+  }
+  h2 {
+    font-weight: bold;
+    color: var(--darkColor);
+    text-transform: capitalize;
+    font-family: "fontBold", sans-serif;
+  }
+}
+
+.careerPage {
+  padding: 0 0 48px;
+  .job {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+    // box-shadow: var(--BigShadow);
+    height: 100%;
+    border: 1px dashed var(--mainColor20);
+    border-radius: 8px;
+    img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      max-height: 200px;
+      object-fit: cover;
+      background-color: var(--secondColor);
+      border-radius: 8px 8px 0 0;
+    }
+    .text {
+      padding: 8px 16px ;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 8px;
+      .jobTitle {
+        font-weight: bold;
+        color: var(--darkColor);
+      }
+      .des {
+        font-size: 13px;
+        flex: 1;
+      }
+      a {
+        margin-top: 16px;
+        text-align: center;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 13px;
+        background-color: var(--mainColor05);
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+
+.careersForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  background-color: var(--secondColor);
+  border-radius: 8px;
+  position: sticky;
+  top: 120px;
+  .title {
+    font-family: "fontBold", Sans-serif;
+    color: var(--mainColor);
+    text-transform: none;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    label {
+      font-family: "fontBold", Sans-serif;
+      font-size: 14px;
+    }
+    .send {
+      background-color: var(--mainColor);
+      padding: 16px;
+      width: min(100% - 24px, 300px);
+      margin: auto;
+      color: var(--whiteColor);
+      border-radius: 100px;
+    }
+  }
+}
+.filepond--credits {
+  display: none !important;
+}
+.filepond--image-clip {
+  direction: ltr !important;
+}
+
+.jobDetails{
+  .details{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .jobImg{
+      width: 100%;
+      aspect-ratio: 3/2;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .jobTitle{
+      font-weight: bold;
+      margin: 8px 0;
+      color: var(--darkColor);
+    }
   }
 }

@@ -203,6 +203,10 @@ $(document).ready(function () {
     slidesPerView: "auto",
     spaceBetween: 0,
     speed: 1000,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       0: {
         slidesPerView: 2,
@@ -222,24 +226,24 @@ $(document).ready(function () {
     },
   });
   // team slider
-  var teamSlider = new Swiper(".teamSlider", {
-    navigation: {
-      nextEl: ".teamNext",
-      prevEl: ".teamPrev",
-    },
-    pagination: {
-      el: ".teamPagination",
-      type: "fraction",
-    },
-    // loop: true,
-    spaceBetween: 30,
-    speed: 1000,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
-    slidesPerView: "auto",
-  });
+  // var teamSlider = new Swiper(".teamSlider", {
+  //   navigation: {
+  //     nextEl: ".teamNext",
+  //     prevEl: ".teamPrev",
+  //   },
+  //   pagination: {
+  //     el: ".teamPagination",
+  //     type: "fraction",
+  //   },
+  //   // loop: true,
+  //   spaceBetween: 30,
+  //   speed: 1000,
+  //   // autoplay: {
+  //   //   delay: 2500,
+  //   //   disableOnInteraction: false,
+  //   // },
+  //   slidesPerView: "auto",
+  // });
   // $(".teamSlider").hover(
   //   function () {
   //     this.swiper.autoplay.stop();
@@ -338,6 +342,46 @@ $(document).ready(function () {
       },
     },
   });
+  // scroll
+  const sections = document.querySelectorAll(".active-nav-class");
+  $(window).on("scroll", function () {
+    let current = "";
+    const scrollPosition = $(window).scrollTop();
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollPosition >= sectionTop - 300) {
+        current = section.getAttribute("id") + "-nav";
+      }
+    });
+    if (current == "") {
+      current = "home-nav";
+    }
+    $(".navbar-nav .navLink.active").removeClass("active");
+    $("#" + current).addClass("active");
+  });
+  $(".navbar-nav .navLink").on("click", function () {
+    $(".navbar-nav .navLink.active").removeClass("active");
+    $(this).addClass("active");
+  });
+  const url = window.location.href;
+  $(".navbar-nav .navLink").each(function () {
+    if (url.includes($(this).attr("href"))) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+  // zoom
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && (e.key === "-" || e.key === "+")) {
+      e.preventDefault();
+    }
+  });
+  document.addEventListener("wheel", function (e) {
+    if (e.ctrlKey) {
+      e.preventDefault();
+    }
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -406,3 +450,9 @@ $(document).ready(function () {
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
 });
+
+
+  // filepond
+  $(".filepond-multiple").filepond({
+    allowMultiple: true,
+  });
