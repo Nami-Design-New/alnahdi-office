@@ -455,7 +455,7 @@ header.headerAnimate {
   position: absolute;
   left: 0;
   top: 0;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3215686275), #fff 75%);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3215686275), #fff 75%);
   z-index: 2;
 }
 .hearo .hearoImg {
@@ -503,6 +503,7 @@ header.headerAnimate {
   color: var(--mainColor);
   font-family: fontBold;
   font-size: 50px;
+  margin-bottom: 16px;
 }
 
 .aboutPage {
