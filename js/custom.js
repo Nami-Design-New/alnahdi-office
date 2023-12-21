@@ -100,7 +100,7 @@ $(document).ready(function () {
   animate_words.forEach((areveal) => {
     var duration_value = 1;
     var onscroll_value = 1;
-    var stagger_value = 0.02;
+    var stagger_value = 0.01;
     var data_delay = 0.5;
     if (areveal.getAttribute("data-duration")) {
       duration_value = areveal.getAttribute("data-duration");
@@ -402,9 +402,13 @@ $(document).ready(function () {
   $("section").each(function () {
     const sectionDivs = $(this).find("[data-aos]");
     sectionDivs.each(function (index) {
-      $(this).attr("data-aos-delay", (index + 1) * 100);
+      // Check if data-aos-delay is not already set
+      if (!$(this).attr("data-aos-delay")) {
+        $(this).attr("data-aos-delay", (index + 1) * 100);
+      }
     });
   });
+
   // aos
   AOS.init({
     offset: 20,
@@ -412,6 +416,7 @@ $(document).ready(function () {
     duration: 750,
     once: true,
   });
+
   // lozad
   const observer = lozad(".lazy", {
     loaded: function (el) {
@@ -451,8 +456,7 @@ $(document).ready(function () {
   elements.forEach((el) => IO.observe(el));
 });
 
-
-  // filepond
-  $(".filepond-multiple").filepond({
-    allowMultiple: true,
-  });
+// filepond
+$(".filepond-multiple").filepond({
+  allowMultiple: true,
+});
